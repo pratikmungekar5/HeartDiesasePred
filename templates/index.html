@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div >
+        <form action="{{ url_for('predict')}}" method="post">
+        <h2>Heart Diease predictor</h2>
+
+
+            <h3>Age</h3><input id="age" name="age" required="required" >
+
+            <h3>gender</h3><br><select name="sex" id="sex" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                </select>
+
+            
+          
+            <h3>smoking</h3><br><select name="smoking" id="smoking" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                </select>
+
+
+            
+
+            <h3>Is patient suffering from diabetes?</h3><br><select name="diabetes" id="diabetes" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                </select>
+
+           <h3>Is patient suffering from High Blood Pressure?</h3><br><select name="high_blood_pressure" id="high_blood_pressure" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                </select>
+ 
+           <h3>Is patient facing Anaemia</h3><br><select name="anaemia" id="anaemia" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                </select>
+
+
+           <h3>creatinine phosphokinase level </h3><input id="creatinine_phosphokinase" name="creatinine_phosphokinase" required="required" >        
+           <h3>ejection fraction </h3><input id="ejection_fraction" name="ejection_fraction" required="required" >  
+           <h3>platelets </h3><input id="platelets" name="platelets" required="required" >  
+           <h3>serum creatinine </h3><input id="serum_creatinine" name="serum_creatinine" required="required" >  
+           <h3>serum sodium </h3><input id="serum_sodium" name="serum_sodium" required="required" >  
+
+           
+
+           
+
+           <h3>time </h3><input id="time" name="time" required="required" >  
+        
+             
+      
+            <br><br><button id="submission" type="submit ">Predict</button>
+            <br>
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}</h3>
+    </div>
+
+
+    
+	
+</body>
+
+</html>
